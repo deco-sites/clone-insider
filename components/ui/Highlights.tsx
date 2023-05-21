@@ -20,30 +20,24 @@ function Highlights({ highlights = [], title }: Props) {
       <h2 class="text-center">
         <span class="font-medium text-2xl">{title}</span>
       </h2>
-
-      <Slider class="carousel carousel-center sm:carousel-end gap-6">
+      <div class="flex gap-5 sm:gap-10 flex-col sm:flex-row justify-center items-center">
         {highlights.map(({ href, src, alt, label }, index) => (
-          <Slider.Item
-            index={index}
-            class="carousel-item first:ml-6 sm:first:ml-0 last:mr-6 sm:last:mr-0 min-w-[190px]"
-          >
-            <a href={href} class="card card-compact bg-base-100">
-              <figure>
-                <Image
-                  class="rounded-[40px]"
-                  src={src}
-                  alt={alt}
-                  width={190}
-                  height={265}
-                />
-              </figure>
-              <div class="card-body items-center">
-                <h2 class="card-title text-base font-medium">{label}</h2>
-              </div>
-            </a>
-          </Slider.Item>
+          <a href={href} class="card card-compact bg-base-100">
+            <figure>
+              <Image
+                class="rounded-[0px] w-full h-full object-cover hover:scale-125 transition-all duration-500 ease-in-out "
+                src={src}
+                alt={alt}
+                width={450}
+                height={450}
+              />
+            </figure>
+            <div class="card-body items-center">
+              <h2 class="card-title text-base font-medium">{label}</h2>
+            </div>
+          </a>
         ))}
-      </Slider>
+      </div>
     </div>
   );
 }
