@@ -1,6 +1,7 @@
 import Searchbar from "$store/islands/HeaderSearchbar.tsx";
 import Buttons from "$store/islands/HeaderButton.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
+import Image from "deco-sites/std/components/Image.tsx";
 import NavItem from "./NavItem.tsx";
 import { navbarHeight } from "./constants.ts";
 import type { INavItem } from "./NavItem.tsx";
@@ -25,7 +26,12 @@ function Navbar({ items, searchbar }: {
           style={{ minHeight: navbarHeight }}
           aria-label="Store logo"
         >
-          <Icon id="Logo" width={126} height={16} />
+          <Image
+            src="https://cdn.shopify.com/s/files/1/0526/4123/5093/files/Insider_Logotipo_160x.png?v=1625615269"
+            alt="Insider"
+            width={160}
+            class="block px-4 py-3"
+          />
         </a>
 
         <div class="flex gap-1">
@@ -38,10 +44,15 @@ function Navbar({ items, searchbar }: {
       <div class="hidden md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6">
         <div class="flex-none w-44">
           <a href="/" aria-label="Store logo" class="block px-4 py-3 w-[160px]">
-            <Icon id="Logo" width={126} height={16} />
+            <Image
+              src="https://cdn.shopify.com/s/files/1/0526/4123/5093/files/Insider_Logotipo_160x.png?v=1625615269"
+              alt="Insider"
+              width={160}
+              class="block px-4 py-3"
+            />
           </a>
         </div>
-        <div class="flex-auto flex justify-center">
+        <div class="flex-auto flex justify-start">
           {items.map((item) => <NavItem item={item} />)}
         </div>
         <div class="flex-none w-44 flex items-center justify-end gap-2">
