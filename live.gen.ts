@@ -31,7 +31,8 @@ import * as $$$$$$$$10 from "./sections/Highlights.tsx";
 import * as $$$$$$$$11 from "./sections/Features.tsx";
 import * as $$$$$$$$12 from "./sections/WishlistGallery.tsx";
 import * as $$$$$$$$13 from "./sections/Footer.tsx";
-import * as $$$$$$$$14 from "./sections/CookieConsent.tsx";
+import * as $$$$$$$$14 from "./sections/Banner.tsx";
+import * as $$$$$$$$15 from "./sections/CookieConsent.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -171,10 +172,11 @@ const manifest = {
     "$live/sections/PageInclude.tsx": i2$$$$0,
     "$live/sections/Slot.tsx": i2$$$$1,
     "$live/sections/UseSlot.tsx": i2$$$$2,
+    "deco-sites/clone-insider/sections/Banner.tsx": $$$$$$$$14,
     "deco-sites/clone-insider/sections/BannerGrid.tsx": $$$$$$$$2,
     "deco-sites/clone-insider/sections/BannerPLP.tsx": $$$$$$$$0,
     "deco-sites/clone-insider/sections/Carousel.tsx": $$$$$$$$6,
-    "deco-sites/clone-insider/sections/CookieConsent.tsx": $$$$$$$$14,
+    "deco-sites/clone-insider/sections/CookieConsent.tsx": $$$$$$$$15,
     "deco-sites/clone-insider/sections/DesignSystem.tsx": $$$$$$$$1,
     "deco-sites/clone-insider/sections/Features.tsx": $$$$$$$$11,
     "deco-sites/clone-insider/sections/Footer.tsx": $$$$$$$$13,

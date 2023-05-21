@@ -80,6 +80,7 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
+              "deco-sites/clone-insider/sections/Banner.tsx",
               "deco-sites/clone-insider/sections/BannerGrid.tsx",
               "deco-sites/clone-insider/sections/BannerPLP.tsx",
               "deco-sites/clone-insider/sections/Carousel.tsx",
@@ -6928,6 +6929,31 @@
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9jbG9uZS1pbnNpZGVyL3NlY3Rpb25zL0Jhbm5lci50c3g=@BannerProps": {
+      "type": "object",
+      "properties": {
+        "srcMobile": {
+          "type": "string",
+          "title": "Src Mobile"
+        },
+        "srcDesktop": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Src Desktop"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        }
+      },
+      "required": [
+        "srcMobile",
+        "alt"
+      ],
+      "title": "deco-sites/clone-insider/sections/Banner.tsx@BannerProps"
+    },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
       "type": "string",
       "format": "image-uri",
@@ -10808,6 +10834,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9jbG9uZS1pbnNpZGVyL3NlY3Rpb25zL0Jhbm5lci50c3g=": {
+      "title": "deco-sites/clone-insider/sections/Banner.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZS1pbnNpZGVyL3NlY3Rpb25zL0Jhbm5lci50c3g=@BannerProps"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/clone-insider/sections/Banner.tsx"
+          ],
+          "default": "deco-sites/clone-insider/sections/Banner.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9jbG9uZS1pbnNpZGVyL3NlY3Rpb25zL0Jhbm5lckdyaWQudHN4": {
       "title": "deco-sites/clone-insider/sections/BannerGrid.tsx",
       "type": "object",
@@ -12241,6 +12288,9 @@
         },
         {
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZS1pbnNpZGVyL3NlY3Rpb25zL0Jhbm5lci50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9jbG9uZS1pbnNpZGVyL3NlY3Rpb25zL0Jhbm5lckdyaWQudHN4"
