@@ -15,13 +15,13 @@ export interface Banner {
   alt: string;
   action?: {
     /** @description when user clicks on the image, go to this link */
-    href: string;
+    href?: string;
     /** @description Image text title */
-    title: string;
+    title?: string;
     /** @description Image text subtitle */
-    subTitle: string;
+    subTitle?: string;
     /** @description Button label */
-    label: string;
+    label?: string;
   };
 }
 
@@ -68,23 +68,21 @@ function BannerItem({ image, lcp }: { image: Banner; lcp?: boolean }) {
           height={600}
         />
         <img
-          class="object-cover w-full"
+          class="w-full h-full object-cover"
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
           alt={alt}
         />
       </Picture>
-      {action && (
-        <div class="absolute top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[235px] flex flex-col gap-4 p-4 rounded glass">
-          <span class="text-6xl font-medium text-base-100">
-            {action.title}
-          </span>
-          <span class="font-medium text-xl text-base-100">
-            {action.subTitle}
-          </span>
-          <Button class="glass">{action.label}</Button>
+      <div>
+        <div class="absolute bottom-0 left-0 right-0 p-3 sm:p-8">
+          <div class="flex flex-col items-center">
+            <h2 class="text-xl font-semibold bg-gray-50 p-4 rounded-lg text-black hover:text-white hover:bg-transparent hover:border-white hover:border-2">
+              {action?.title}
+            </h2>
+          </div>
         </div>
-      )}
+      </div>
     </a>
   );
 }
@@ -163,8 +161,6 @@ function BannerCarousel({ images, preload, interval }: Props) {
           </Slider.Item>
         ))}
       </Slider>
-
-      <Buttons />
 
       <Dots images={images} interval={interval} />
 
